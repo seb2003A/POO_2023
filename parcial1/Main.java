@@ -20,7 +20,7 @@ public class Main {
         //////////confirma duplicidad de placas y muestra la información de cada vehiculo
         for (Vehiculo vehiculo : vehiculos) {
             if (placas.contains(vehiculo.getPlaca())) {
-                System.out.println("Duplicidad de placas para la placa: " + vehiculo.getPlaca());
+                System.out.println("duplicidad de placas para la placa: " + vehiculo.getPlaca());
             } else {
                 placas.add(vehiculo.getPlaca());
                 vehiculo.mostrarInformacion();
@@ -30,7 +30,7 @@ public class Main {
         }
 
         ////////obtener  los vehiculos
-        System.out.println("Vehiculos Automovil:");
+        System.out.println("vehiculos automovil:");
         for (Vehiculo vehiculo : vehiculos) {
             if (vehiculo instanceof Automovil) {
                 vehiculo.mostrarInformacion();
@@ -39,7 +39,7 @@ public class Main {
         }
 
         /////////obtener todos las motos 
-        System.out.println("Vehiculos Motocicleta:");
+        System.out.println("Vehiculos motocicleta:");
         for (Vehiculo vehiculo : vehiculos) {
             if (vehiculo instanceof Motocicleta) {
                 vehiculo.mostrarInformacion();
@@ -51,7 +51,7 @@ public class Main {
         modificarNombrePropietario(vehiculos, "Carlos Ramirez", "Carlos Rodriguez");
 
         // obtener todos los Vehiculos (Para verificar que se modifico)
-        System.out.println("Vehiculos después de la modificación:");
+        System.out.println("vehiculos despues de la modificacion:");
         for (Vehiculo vehiculo : vehiculos) {
             vehiculo.mostrarInformacion();
             System.out.println();
@@ -65,9 +65,9 @@ public class Main {
         for (Vehiculo vehiculo : vehiculos) {
             if (vehiculo.getPropietario().equals(propietarioActual)) {
                 vehiculo.mostrarInformacion();
-                System.out.println("Modificando propietario de " + propietarioActual + " a " + nuevoPropietario);
+                System.out.println("modificando propietario de " + propietarioActual + " a " + nuevoPropietario);
                 vehiculo.setPropietario(nuevoPropietario);
-                System.out.println("Propietario modificado con éxito.");
+                System.out.println("propietario modificado con exito.");
                 vehiculo.mostrarInformacion();
                 break;
             }
@@ -77,12 +77,12 @@ public class Main {
     private static void buscarVehiculoPorPlaca(List<Vehiculo> vehiculos, String placaBuscada) {
         for (Vehiculo vehiculo : vehiculos) {
             if (vehiculo.getPlaca().equals(placaBuscada)) {
-                System.out.println("Vehiculo con placa " + placaBuscada + ":");
+                System.out.println("vehiculo con placa " + placaBuscada + ":");
                 vehiculo.mostrarInformacion();
                 return;
             }
         }
-        System.out.println("No se encontró ningún vehículo con la placa " + placaBuscada);
+        System.out.println("no se encontro ningun vehiculo con la placa " + placaBuscada);
     }
 }
 
