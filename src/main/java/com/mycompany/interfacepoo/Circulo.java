@@ -19,5 +19,13 @@ package com.mycompany.interfacepoo;
     public double calcularPerimetro() {
         return 2 * Math.PI * radio;
     }
+
+    @Override
+    public double CalcularAreaTriangulo() {
+        return 0;
+    }
+
+
+   
 }
 

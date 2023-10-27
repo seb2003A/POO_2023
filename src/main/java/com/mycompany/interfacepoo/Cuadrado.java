@@ -1,7 +1,7 @@
 
 package com.mycompany.interfacepoo;
 
-    class Cuadrado implements Forma {
+   class Cuadrado implements Forma {
     private double lado;
 
     public Cuadrado(double lado) {
@@ -17,5 +17,13 @@ package com.mycompany.interfacepoo;
     public double calcularPerimetro() {
         return 4 * lado;
     }
+
+    @Override
+    public double CalcularAreaTriangulo() {
+    return 0;
+    }
+
+ 
+  
 }
 
